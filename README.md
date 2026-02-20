@@ -42,4 +42,4 @@ If you want to build it yourself:
 3. `flutter run`
 
 ---
-*Created with ❤️ by Antigravity*
+*Created by  ❤️  siyabonga  *
