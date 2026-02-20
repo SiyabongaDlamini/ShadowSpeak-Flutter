@@ -11,16 +11,30 @@ ShadowSpeak is a premium Flutter application designed to help you master your pr
 - **Premium UI**: Vibrant Material 3 design with smooth transitions and glassmorphic elements.
 - **Progress Tracking**: Weekly goals and practice history.
 
-## 🚀 How to use it on your phone
+## 📲 Install on Your Phone
 
-1. **GitHub Repository**: [ShadowSpeak-Flutter](https://github.com/SiyabongaDlamini/ShadowSpeak-Flutter)
-2. **Download APK**:
-   - Go to the **Actions** tab on the GitHub repository.
-   - Click on the latest **Build APK** run.
-   - Download the `shadowspeak-debug-apk` artifact.
-   - Install it on your Android phone!
+Getting ShadowSpeak on your device is easy. Choose your platform below:
 
-## 🛠️ Development
+### 🤖 Android (Direct Install)
+[![Install Android](https://img.shields.io/badge/Install-Android-green?style=for-the-badge&logo=android)](https://github.com/SiyabongaDlamini/ShadowSpeak-Flutter/releases/latest)
+
+1. Click the button above and download the **`app-debug.apk`**.
+2. Open the file on your phone.
+3. If prompted, "Allow install from unknown sources".
+4. Start practicing!
+
+### 🍎 iOS (Developer Only)
+[![Install iOS](https://img.shields.io/badge/Install-iOS-blue?style=for-the-badge&logo=apple)](https://github.com/SiyabongaDlamini/ShadowSpeak-Flutter#ios-installation)
+
+> [!NOTE]
+> Due to Apple's security policies, iOS apps cannot be installed directly from a website like GitHub. To run this on iPhone:
+> 1. Clone this repo to a Mac.
+> 2. Open `ios/Runner.xcworkspace` in Xcode.
+> 3. Connect your iPhone and click **Run**.
+
+---
+
+## ✨ Key Features
 
 If you want to build it yourself:
 1. `git clone https://github.com/SiyabongaDlamini/ShadowSpeak-Flutter.git`

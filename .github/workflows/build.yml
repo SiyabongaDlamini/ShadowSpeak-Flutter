@@ -1,15 +1,20 @@
-name: Build APK
+name: Build & Release App
 
 on:
   push:
     branches: [ "main" ]
+    tags:
+      - 'v*'
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: write
+
 jobs:
   build:
+    name: Build APK
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
     
@@ -31,8 +36,29 @@ jobs:
     - name: Build APK
       run: flutter build apk --debug
       
-    - name: Upload APK
+    - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: shadowspeak-debug-apk
         path: build/app/outputs/flutter-apk/app-debug.apk
+
+  release:
+    name: Create Release
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download Artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: shadowspeak-debug-apk
+        
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: app-debug.apk
+        name: ShadowSpeak Release ${{ github.ref_name }}
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
